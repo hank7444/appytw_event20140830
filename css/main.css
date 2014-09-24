@@ -1,0 +1,178 @@
+@charset "UTF-8";
+/* 將預設的focus虛線去除 */
+*:focus {
+  outline: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+/* firefox 將select的虛線去除 */
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 black;
+}
+
+body {
+  color: white;
+  background-color: #353443;
+  font: 12px "蘋果儷中黑", "微軟正黑體", Verdana, Arial, sans-serif, "新細明體";
+}
+
+#container {
+  min-width: 1024px;
+}
+#container .page {
+  position: relative;
+  height: 619px;
+}
+#container .page .logo {
+  display: block;
+  position: relative;
+  top: 80px;
+  left: 50px;
+  width: 104px;
+  height: 94px;
+  background: url("../img/logo.png");
+}
+#container .page .wrapper {
+  width: 1024px;
+  margin: 0 auto;
+}
+#container .p1 {
+  background: url("../img/p1bg.jpg");
+  background-size: cover;
+}
+#container .p1 .next {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -22.5px;
+  width: 45px;
+  height: 30px;
+  background: url("../img/next.png");
+}
+#container .p1 .next:hover {
+  background: url("../img/nexth.png");
+}
+#container .p2 {
+  height: 619px;
+}
+#container .p2 h1 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 102px;
+}
+#container .p2 .member-container {
+  width: 753px;
+  margin: 0 auto;
+}
+#container .p2 .member-container .icons {
+  position: relative;
+  text-align: center;
+  height: 121px;
+}
+#container .p2 .member-container .icons .icon {
+  display: inline-block;
+  position: absolute;
+}
+#container .p2 .member-container .icons .hr {
+  position: absolute;
+  display: inline-block;
+  border-bottom: 2px solid #777781;
+  height: 75px;
+  width: 174px;
+}
+#container .p2 .member-container .icons .hr1 {
+  left: 156px;
+}
+#container .p2 .member-container .icons .hr2 {
+  right: 156px;
+}
+#container .p2 .member-container .icons .tasi {
+  background: url("../img/tsai.png") no-repeat center;
+  width: 96px;
+  height: 119px;
+  left: 60px;
+}
+#container .p2 .member-container .icons .tasi:hover {
+  background: url("../img/tsaih.png") no-repeat center;
+  height: 144px;
+  width: 109px;
+  left: 49px;
+  bottom: 0px;
+}
+#container .p2 .member-container .icons .tasi:active {
+  background: url("../img/tsaia.png") no-repeat center;
+  height: 146px;
+  width: 111px;
+  left: 47px;
+  bottom: 0px;
+}
+#container .p2 .member-container .icons .lin {
+  background: url("../img/lin.png") no-repeat center;
+  width: 96px;
+  height: 110px;
+  margin-top: 9px;
+  left: 327px;
+}
+#container .p2 .member-container .icons .lin:hover {
+  background: url("../img/linh.png") no-repeat center;
+  height: 137px;
+  width: 99px;
+  left: 325px;
+  bottom: 0px;
+}
+#container .p2 .member-container .icons .lin:active {
+  background: url("../img/lina.png") no-repeat center;
+  height: 139px;
+  width: 101px;
+  left: 323px;
+  bottom: 0px;
+}
+#container .p2 .member-container .icons .wu {
+  background: url("../img/wu.png") no-repeat center;
+  width: 96px;
+  height: 108px;
+  margin-top: 11px;
+  right: 60px;
+}
+#container .p2 .member-container .icons .wu:hover {
+  background: url("../img/wuh.png") no-repeat center;
+  height: 136px;
+  width: 98px;
+  right: 60px;
+  bottom: 0px;
+}
+#container .p2 .member-container .icons .wu:active {
+  background: url("../img/wua.png") no-repeat center;
+  height: 138px;
+  width: 98px;
+  right: 60px;
+  bottom: 0px;
+}
+#container .p2 .member-container .profiles .profile {
+  display: inline-block;
+  text-align: center;
+}
+#container .p2 .member-container .profiles .profile .name {
+  color: #0f93a6;
+  font-size: 29px;
+  line-height: 29px;
+  margin: 16px 0 9px;
+}
+#container .p2 .member-container .profiles .profile .area {
+  font-size: 14px;
+  margin: 0 0 3px 0;
+}
+#container .p2 .member-container .profiles .tasi {
+  margin-left: 58px;
+}
+#container .p2 .member-container .profiles .lin {
+  margin-left: 158px;
+}
+#container .p2 .member-container .profiles .wu {
+  margin-left: 113px;
+}

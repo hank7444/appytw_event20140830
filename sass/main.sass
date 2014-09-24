@@ -1,0 +1,157 @@
+@charset "UTF-8"
+
+@import compass
+
+/* 將預設的focus虛線去除 */
+*
+	&:focus
+		outline: none
+
+a
+	&:focus
+		outline: none
+
+/* firefox 將select的虛線去除 */
+select
+	&:-moz-focusring 
+		color: transparent
+		text-shadow: 0 0 0 #000
+
+
+body
+	color: #fff
+	background-color: #353443
+	font: 12px "蘋果儷中黑", "微軟正黑體", Verdana, Arial, sans-serif, "新細明體"
+
+
+#container
+	min-width: 1024px
+	.page
+		position: relative
+		height: 619px
+		.logo
+			display: block
+			position: relative
+			top: 80px
+			left: 50px
+			width: 104px
+			height: 94px
+			background: url("../img/logo.png")
+
+		.wrapper
+			width: 1024px
+			margin: 0 auto
+	.p1
+		background: url("../img/p1bg.jpg")
+		background-size: cover
+		.next
+			display: block
+			position: absolute
+			bottom: 0
+			left: 50%
+			margin-left: -22.5px
+			width: 45px
+			height: 30px
+			background: url("../img/next.png")
+			&:hover
+				background: url("../img/nexth.png")
+	.p2
+		height: 619px
+		h1
+			font-size: 28px
+			text-align: center
+			margin-bottom: 102px
+		.member-container
+			width: 753px
+			margin: 0 auto
+
+			.icons
+				position: relative
+				text-align: center
+				height: 121px
+				.icon
+					display: inline-block
+					position: absolute
+				.hr
+					position: absolute
+					display: inline-block
+					border-bottom: 2px solid #777781
+					height: 75px
+					width: 174px
+				.hr1
+					left: 156px
+				.hr2
+					right: 156px
+				.tasi
+					background: url("../img/tsai.png") no-repeat center
+					width: 96px
+					height: 119px
+					left: 60px
+					&:hover
+						background: url("../img/tsaih.png") no-repeat center
+						height: 144px
+						width: 109px
+						left: 49px
+						bottom: 0px
+					&:active
+						background: url("../img/tsaia.png") no-repeat center
+						height: 146px
+						width: 111px
+						left: 47px
+						bottom: 0px
+				.lin
+					background: url("../img/lin.png") no-repeat center
+					width: 96px
+					height: 110px
+					margin-top: 9px
+					left: 327px
+					&:hover
+						background: url("../img/linh.png") no-repeat center
+						height: 137px
+						width: 99px
+						left: 325px
+						bottom: 0px
+					&:active
+						background: url("../img/lina.png") no-repeat center
+						height: 139px
+						width: 101px
+						left: 323px
+						bottom: 0px
+				.wu
+					background: url("../img/wu.png") no-repeat center
+					width: 96px
+					height: 108px
+					margin-top: 11px
+					right: 60px
+					&:hover
+						background: url("../img/wuh.png") no-repeat center
+						height: 136px
+						width: 98px
+						right: 60px
+						bottom: 0px
+					&:active
+						background: url("../img/wua.png") no-repeat center
+						height: 138px
+						width: 98px
+						right: 60px
+						bottom: 0px
+			.profiles
+				.profile
+					display: inline-block
+					text-align: center
+					.name
+						color: #0f93a6
+						font-size: 29px
+						line-height: 29px
+						margin: 16px 0 9px
+					.area
+						font-size: 14px
+						margin: 0 0 3px 0
+				.tasi
+					margin-left: 58px
+				.lin
+					margin-left: 158px
+				.wu
+					margin-left: 113px
+	.p3
+		
