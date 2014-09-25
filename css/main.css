@@ -38,11 +38,16 @@ body {
 }
 #container .page .wrapper {
   width: 1024px;
+  height: 599px;
   margin: 0 auto;
+  position: relative;
 }
 #container .p1 {
   background: url("../img/p1bg.jpg") no-repeat center;
   background-size: cover;
+}
+#container .p1 .wrapper {
+  position: static;
 }
 #container .p1 .next {
   display: block;
@@ -198,11 +203,10 @@ body {
 #container .p3 .title .pic {
   margin-right: 15px;
   position: relative;
-  top: 10px;
-  vertical-align: bottom;
 }
 #container .p3 .title .detail {
   display: inline-block;
+  vertical-align: top;
 }
 #container .p3 .title .detail .name {
   font-size: 47px;
@@ -213,7 +217,48 @@ body {
 }
 #container .p3 .title .detail .slogan {
   font-size: 28px;
-  margin-top: 6px;
+  margin-top: 9px;
+  margin-bottom: 7px;
+}
+#container .p3 .title .detail .aread {
+  font-size: 32px;
+  height: 32px;
+}
+#container .p3 .title.tasi .pic {
+  bottom: 25px;
+}
+#container .p3 .title.tasi .detail .name:after {
+  content: "蔡正元";
+}
+#container .p3 .title.tasi .detail .area:after {
+  content: "台北市第4選區";
+}
+#container .p3 .title.tasi .detail .aread {
+  color: #a74c4c;
+}
+#container .p3 .title.lin .pic {
+  bottom: 17px;
+}
+#container .p3 .title.lin .detail .name:after {
+  content: "林鴻池";
+}
+#container .p3 .title.lin .detail .area:after {
+  content: "新北市第6選區";
+}
+#container .p3 .title.lin .detail .aread {
+  color: #4b88a4;
+}
+#container .p3 .title.wu .pic {
+  bottom: 15px;
+}
+#container .p3 .title.wu .detail .name:after {
+  content: "吳育昇";
+}
+#container .p3 .title.wu .detail .area:after {
+  content: "新北市第1選區";
+}
+#container .p3 .title.wu .detail .aread {
+  color: #dd8f42;
 }
 #container .p3 .form {
   float: left;
@@ -239,4 +284,36 @@ body {
   background-color: transparent;
   width: 78%;
   height: 75%;
+}
+#container .p3 .form .form-group .error {
+  color: #ca1117;
+  font-size: 16px;
+  margin-top: 3px;
+  margin-left: 75px;
+}
+#container .p3 .form .btn {
+  display: inline-block;
+  width: 72px;
+  height: 39px;
+  background-color: #00ad98;
+  border-radius: 3px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+}
+#container .p3 .map {
+  position: absolute;
+  right: 0;
+}
+#container .p3 .map.tasi {
+  top: 17px;
+}
+#container .p3 .map.lin {
+  top: 0px;
+  right: 30px;
+}
+#container .p3 .map.wu {
+  right: 20px;
+  top: -50px;
 }

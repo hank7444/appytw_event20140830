@@ -40,10 +40,14 @@ body
 
 		.wrapper
 			width: 1024px
+			height: 599px
 			margin: 0 auto
+			position: relative
 	.p1
 		background: url("../img/p1bg.jpg") no-repeat center
 		background-size: cover
+		.wrapper
+			position: static
 		.next
 			display: block
 			position: absolute
@@ -172,10 +176,9 @@ body
 			.pic
 				margin-right: 15px
 				position: relative
-				top: 10px
-				vertical-align: bottom
 			.detail
 				display: inline-block
+				vertical-align: top
 				.name
 					font-size: 47px
 					color: #17889a
@@ -183,7 +186,48 @@ body
 					font-size: 16px
 				.slogan
 					font-size: 28px
-					margin-top: 6px
+					margin-top: 9px
+					margin-bottom: 7px
+				.aread
+					font-size: 32px
+					height: 32px
+		.title.tasi
+			.pic
+				bottom: 25px
+			.detail
+				.name
+					&:after
+						content: "蔡正元"
+				.area
+					&:after
+						content: "台北市第4選區"
+				.aread
+					color: #a74c4c
+		.title.lin
+			.pic
+				bottom: 17px
+			.detail
+				.name
+					&:after
+						content: "林鴻池"
+				.area
+					&:after
+						content: "新北市第6選區"
+				.aread
+					color: #4b88a4
+		.title.wu
+			.pic
+				bottom: 15px
+			.detail
+				.name
+					&:after
+						content: "吳育昇"
+				.area
+					&:after
+						content: "新北市第1選區"
+				.aread
+					color: #dd8f42
+
 		.form
 			float: left
 			width: 40%
@@ -205,7 +249,34 @@ body
 					background-color: transparent
 					width: 78%
 					height: 75%
+				.error
+					color: #ca1117
+					font-size: 16px 
+					margin-top: 3px
+					margin-left: 75px
+			.btn
+				display: inline-block
+				width: 72px
+				height: 39px
+				background-color: #00ad98
+				border-radius: 3px
+				font-size: 20px
+				color: #fff
+				text-align: center
+				line-height: 40px
+
 		.map
+			position: absolute
+			right: 0
+		.map.tasi
+			top: 17px
+		.map.lin
+			top: 0px
+			right: 30px
+		.map.wu
+			right: 20px
+			top: -50px
+
 			
 
 
