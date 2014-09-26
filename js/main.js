@@ -10,27 +10,52 @@
     var $p3 = $('.p3');
     var $title = $p3.find('.title');
     var $map = $p3.find('.map');
+    var $formDiv = $('.form');
     var $form = $('#form');
     var $lightboxMsg = $('#lightboxMsg');
     var $area = $('map area');
     var $puzzle = $('.puzzle');
+    var $areaInput = $('#area');
+    var $memberInput = $('#member');
 
     var memberDataHash = {
     	'tsai': {
     		iconHeight: 119,
-    		mapAlt: '台北市第4選區'
+    		mapAlt: '台北市第4選區',
+    		areaInput: '台北市/'
     	},
     	'lin': {
     		iconHeight: 110,
-    		mapAlt: '新北市第6選區'
+    		mapAlt: '新北市第6選區',
+    		areaInput: '新北市/板橋區/'
     	},
     	'wu': {
     		iconHeight: 108,
-    		mapAlt: '新北市第1選區'
+    		mapAlt: '新北市第1選區',
+    		areaInput: '新北市/'
     	}
 
     };
     var memberNames = 'tasi lin wu';
+    var mapHighlightOption = {
+		fill: true,
+		fillColor: 'ff0000',
+		fillOpacity: 1,
+		stroke: true,
+		strokeColor: 'ffffff',
+		strokeOpacity: 1,
+		strokeWidth: 1,
+		fade: true,
+		shadow: false,
+		shadowPosition: 'outside',
+		shadowFrom: 'fill',
+		shadowX: 10,
+		shadowY: 10,
+		shadowRadius: 1,
+		shadowColor: '0000ff',
+		shadowOpacity: 0.5
+	};
+	$map.find('img').maphilight(mapHighlightOption);
 
     $(function() {
 
@@ -65,9 +90,16 @@
     		$title.removeClass(memberNames).addClass(href);
     		$title.find('img').attr('src', '../img/' + href + '.png')
     						  .attr('height', memberData.iconHeight);
-    		$map.removeClass(memberNames).addClass(href);
-    		$map.find('img').attr('src', '../img/map-' + href + '.png')
-    						.attr('usemap', '#map-' + href);
+    		$title.find('.aread').html('');
+
+    		$map.hide();
+    		$map.filter('.' + href).show();
+
+    		$memberInput.val(href);
+    		$areaInput.val(memberData.areaInput);
+    		$areaInput.autocomplete({
+    			source: areaData[href]
+    		});
 
     		$p3.fadeIn(300, function() {
 
@@ -109,74 +141,20 @@
                 }
             });
     	});
-/*
-    	$map.find('img').on('mouseover', function(e) {
-    		console.log(e.relatedTarget);
-    	});*/
-/*
-    	$area.on('mouseover', function(e) {
-    		e.preventDefault();
-    		console.log($(this).attr('alt'));
-
-    		var alt = $(this).attr('alt');
-
-    		$puzzle.filter('[title="' + alt + '"]').fadeIn();
-    	});
-
-
-    	$puzzle.on('mouseover', function(e) {
-    		e.preventDefault();
-    		
-    		console.log(e.relatedTarget);
-    	});
-
-    	$puzzle.on('mouseleave', function(e) {
-    		e.preventDefault();
-    		$(this).fadeOut();
-    	});
-*/
-
 		$area.on('mouseover', function(e) {
     		e.preventDefault();
-    		console.log($(this).attr('alt'));
 
     		var alt = $(this).attr('alt');
-
-    		//$puzzle.filter('[title="' + alt + '"]').fadeIn();
+    		$title.find('.aread').html(alt);
     	});
 
     	$area.on('click', function(e) {
     		e.preventDefault();
-    		console.log($(this).attr('alt'));
-
+ 
     		var alt = $(this).attr('alt');
-
-    		//$puzzle.filter('[title="' + alt + '"]').fadeIn();
-    		$puzzle.filter('[title="' + alt + '"]').fadeIn();
+    		$areaInput.val(alt);
+    		$formDiv.fadeIn();
     	});
-
-		$map.find('img').maphilight({
-			fill: true,
-			fillColor: 'ff0000',
-			fillOpacity: 1,
-			stroke: true,
-			strokeColor: 'ffffff',
-			strokeOpacity: 1,
-			strokeWidth: 1,
-			fade: true,
-			shadow: false,
-			shadowPosition: 'outside',
-			shadowFrom: 'fill',
-			shadowX: 10,
-			shadowY: 10,
-			shadowRadius: 1,
-			shadowColor: '0000ff',
-			shadowOpacity: 0.5
-		});
-
-
-
-
 
 
     	$lightboxMsg.find('.header a').on('click', function(e) {
@@ -202,6 +180,11 @@
             }
         });
 
+        $('#area').rules('add', {
+        	required: true,
+        	maxlength: 15
+        });
+
         $('#name').rules('add', {
             required: true,
             maxlength: 15
@@ -223,10 +206,10 @@
 
         $('#btnSubmit').on('click', function(e) {
         	e.preventDefault();
-/*
+
         	if (!$form.valid()) {
         		return false;
-        	}*/
+        	}
 
         	var params = $form.serialize();
 
@@ -236,11 +219,16 @@
 
         	$.post('http://xxx.xxx', params, null, 'json').done(function() {
 
+        		var member = $memberInput.val();
         		$form[0].reset();
+        		$memberInput.val(member);
+        		$areaInput.val(memberDataHash[member].areaInput);
+
         		$lightboxMsg.find('.content').html('儲存成功，謝謝您的參與！');
         		$lightboxMsg.find('.header').css('visibility', 'visible');
 
         	}).fail(function() {
+
         		$lightboxMsg.find('.content').html('伺服器沒有回應，請稍後再試');
         		$lightboxMsg.find('.header').css('visibility', 'visible');
 

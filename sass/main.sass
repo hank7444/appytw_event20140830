@@ -2,18 +2,6 @@
 
 @import compass
 
-$sprite-layout: horizontal
-$sprite-spacing: 20px  
-$sprite-tsai: sprite-map("../img/sprites-tsai/*.png")
-
-
-@mixin sprite-background($sprite, $icon-name)
-	$img: sprite($sprite, $icon-name)
-	$file: sprite-file($sprite, $icon-name)
-	background: $img
-	width: image-width($file)
-	height: image-height($file)
-
 /* 將預設的focus虛線去除 */
 *
 	&:focus
@@ -36,6 +24,10 @@ body
 	font: 12px "蘋果儷中黑", "微軟正黑體", Verdana, Arial, sans-serif, "新細明體"
 
 
+.ui-autocomplete 
+	max-height: 200px
+	overflow-y: auto
+	overflow-x: hidden
 
 .lightbox-fadeall
 	display: none
@@ -113,7 +105,7 @@ body
 			&:hover
 				background: url("../img/nexth.png") no-repeat center
 	.p2
-		display: block
+		display: none
 		height: 619px
 		background-color: inherit
 		h1
@@ -213,7 +205,7 @@ body
 				.wu
 					margin-left: 113px
 	.p3
-		display: block
+		display: none
 		.back-wrapper 
 			text-align: right
 			.back
@@ -335,57 +327,14 @@ body
 			position: absolute
 			right: 0
 		.map.tsai
-			top: 70px
+			top: 95px
+			right: -5px
 		.map.lin
 			top: 70px
 			right: 30px
 		.map.wu
 			right: 20px
 			top: 0px
-		.puzzle
-			position: absolute
-			right: 0
-			display: none
-			z-index: 300
-		.t01
-			+sprite-background($sprite-tsai, "MAP_T01")
-			top: 87px
-			left: -23px
-		.t02
-			+sprite-background($sprite-tsai, "MAP_T02")
-			top: 66px
-			left: 15px
-		.t03
-			+sprite-background($sprite-tsai, "MAP_T03")
-			top: 32px
-			left: 67px
-		.t04
-			+sprite-background($sprite-tsai, "MAP_T04")
-			top: -13px
-			left: 109px
-		.t05
-			+sprite-background($sprite-tsai, "MAP_T05")
-			top: 1px
-			left: 192px
-		.t06
-			+sprite-background($sprite-tsai, "MAP_T06")
-			top: 133px
-			left: 36px
-		.t07
-			+sprite-background($sprite-tsai, "MAP_T07")
-			top: 76px
-			left: 64px
-		.t08
-			+sprite-background($sprite-tsai, "MAP_T08")
-			top: 68px
-			left: 177px
-		.t09
-			+sprite-background($sprite-tsai, "MAP_T09")
-			top: 99px
-			left: 245px
-		.t10
-			+sprite-background($sprite-tsai, "MAP_T10")
-			top: 109px
-			left: 154px
+
 
 

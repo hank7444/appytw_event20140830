@@ -301,7 +301,7 @@
 						$(canvas).append('<v:rect></v:rect>');
 					}
 				}
-			}
+			};
 
 			$(map).bind('alwaysOn.maphilight', function() {
 				// Check for areas with alwaysOn set. These are added to a *second* canvas,
