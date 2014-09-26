@@ -2,6 +2,18 @@
 
 @import compass
 
+$sprite-layout: horizontal
+$sprite-spacing: 20px  
+$sprite-tsai: sprite-map("../img/sprites-tsai/*.png")
+
+
+@mixin sprite-background($sprite, $icon-name)
+	$img: sprite($sprite, $icon-name)
+	$file: sprite-file($sprite, $icon-name)
+	background: $img
+	width: image-width($file)
+	height: image-height($file)
+
 /* 將預設的focus虛線去除 */
 *
 	&:focus
@@ -22,6 +34,47 @@ body
 	color: #fff
 	background-color: #353443
 	font: 12px "蘋果儷中黑", "微軟正黑體", Verdana, Arial, sans-serif, "新細明體"
+
+
+
+.lightbox-fadeall
+	display: none
+	font-family: sans-serif
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	outline: 0 none
+	background-image: inline-image("../img/lightbox-fade.png")
+	background-repeat: repeat
+	z-index: 1050
+	.dialog
+		position: absolute
+		top: 30%
+		left: 50%
+		.dialog-inner
+			margin-left: -200px
+			.container
+				width: 400px
+				height: 192px
+				background: url("../img/lightbox.png") no-repeat center
+				.header
+					text-align: right
+					a
+						display: block
+						position: relative
+						top: 5px
+						right: 6px
+						font-size: 18px
+				.content
+					color: #000
+					font-size: 18px
+					line-height: 30px
+					margin-left: 150px
+					margin-top: 50px
+					padding-right: 10px
+
 
 
 #container
@@ -60,7 +113,9 @@ body
 			&:hover
 				background: url("../img/nexth.png") no-repeat center
 	.p2
+		display: block
 		height: 619px
+		background-color: inherit
 		h1
 			font-size: 28px
 			text-align: center
@@ -86,7 +141,7 @@ body
 					left: 156px
 				.hr2
 					right: 156px
-				.tasi
+				.tsai
 					background: url("../img/tsai.png") no-repeat center
 					width: 96px
 					height: 119px
@@ -151,13 +206,14 @@ body
 					.area
 						font-size: 14px
 						margin: 0 0 3px 0
-				.tasi
+				.tsai
 					margin-left: 58px
 				.lin
 					margin-left: 158px
 				.wu
 					margin-left: 113px
 	.p3
+		display: block
 		.back-wrapper 
 			text-align: right
 			.back
@@ -172,7 +228,6 @@ body
 			width: 753px
 			margin-left: 194px
 			position: relative
-			bottom: 40px
 			.pic
 				margin-right: 15px
 				position: relative
@@ -181,17 +236,20 @@ body
 				vertical-align: top
 				.name
 					font-size: 47px
+					line-height: 47px
 					color: #17889a
 				.area
 					font-size: 16px
 				.slogan
 					font-size: 28px
-					margin-top: 9px
-					margin-bottom: 7px
+					line-height: 28px
+					margin-top: 10px
+					margin-bottom: 8px
 				.aread
 					font-size: 32px
 					height: 32px
-		.title.tasi
+					line-height: 32px
+		.title.tsai
 			.pic
 				bottom: 25px
 			.detail
@@ -229,26 +287,30 @@ body
 					color: #dd8f42
 
 		.form
+			display: none
 			float: left
 			width: 40%
 			margin-left: 50px
 			margin-top: 59px
 			.form-group
-				width: 367px
-				height: 41px
-				background: url("../img/input.png") no-repeat center
-				font-size: 20px
 				margin-bottom: 26px
-				label
-					margin: 0 11px 0 14px
-					line-height: 42px
-				input
-					font-size: inherit
-					color: #fff
-					border: 0px solid #fff
-					background-color: transparent
-					width: 78%
-					height: 75%
+				.inner
+					width: 367px
+					height: 41px
+					background: url("../img/input.png") no-repeat center
+					font-size: 20px
+					label
+						margin: 0 11px 0 14px
+						line-height: 42px
+						float: left
+					input
+						font-size: inherit
+						color: #fff
+						border: 0px solid #fff
+						background-color: transparent
+						width: 78%
+						height: 75%
+						margin: 4px 0px 0px 3px
 				.error
 					color: #ca1117
 					font-size: 16px 
@@ -264,19 +326,66 @@ body
 				color: #fff
 				text-align: center
 				line-height: 40px
+				&:active
+					color: #354b48
+					margin: 3px 0px 0px 3px
+
 
 		.map
 			position: absolute
 			right: 0
-		.map.tasi
-			top: 17px
+		.map.tsai
+			top: 70px
 		.map.lin
-			top: 0px
+			top: 70px
 			right: 30px
 		.map.wu
 			right: 20px
-			top: -50px
-
-			
+			top: 0px
+		.puzzle
+			position: absolute
+			right: 0
+			display: none
+			z-index: 300
+		.t01
+			+sprite-background($sprite-tsai, "MAP_T01")
+			top: 87px
+			left: -23px
+		.t02
+			+sprite-background($sprite-tsai, "MAP_T02")
+			top: 66px
+			left: 15px
+		.t03
+			+sprite-background($sprite-tsai, "MAP_T03")
+			top: 32px
+			left: 67px
+		.t04
+			+sprite-background($sprite-tsai, "MAP_T04")
+			top: -13px
+			left: 109px
+		.t05
+			+sprite-background($sprite-tsai, "MAP_T05")
+			top: 1px
+			left: 192px
+		.t06
+			+sprite-background($sprite-tsai, "MAP_T06")
+			top: 133px
+			left: 36px
+		.t07
+			+sprite-background($sprite-tsai, "MAP_T07")
+			top: 76px
+			left: 64px
+		.t08
+			+sprite-background($sprite-tsai, "MAP_T08")
+			top: 68px
+			left: 177px
+		.t09
+			+sprite-background($sprite-tsai, "MAP_T09")
+			top: 99px
+			left: 245px
+		.t10
+			+sprite-background($sprite-tsai, "MAP_T10")
+			top: 109px
+			left: 154px
 
 

@@ -29,7 +29,7 @@ var filefolder = {
     'js': 'js/**/*.js',
     'html': 'html/**/*.html',
     'css': 'css/**/*.css',
-    'sass': 'sass/**/*.{sass, scss}',
+    'sass': 'sass/**/*.{sass, scss}'
 };
 
 var indexPath = 'html/main.html';
@@ -51,10 +51,7 @@ var watchStatus = {
 
 gulp.task('compass', function() {
     gulp.src(filefolder.sass)
-        .pipe(watch({
-            'emit': 'all',
-            'glob': filefolder.sass
-        }))
+        .pipe(watch(filefolder.sass))
         .pipe(plumber())
         .pipe(filter(watchStatus.isNotDeleted))
         .pipe(compass({

@@ -20,6 +20,51 @@ body {
   font: 12px "蘋果儷中黑", "微軟正黑體", Verdana, Arial, sans-serif, "新細明體";
 }
 
+.lightbox-fadeall {
+  display: none;
+  font-family: sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  outline: 0 none;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyQkZEMEJGQzIwOUMxMUU0QkRFRThEMEZBRjk4MDg5MCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyQkZEMEJGRDIwOUMxMUU0QkRFRThEMEZBRjk4MDg5MCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjJCRkQwQkZBMjA5QzExRTRCREVFOEQwRkFGOTgwODkwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjJCRkQwQkZCMjA5QzExRTRCREVFOEQwRkFGOTgwODkwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+BEmwQQAAAA9JREFUeNpiYGBg2AwQYAAAuAC01qHx9QAAAABJRU5ErkJggg==');
+  background-repeat: repeat;
+  z-index: 1050;
+}
+.lightbox-fadeall .dialog {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+.lightbox-fadeall .dialog .dialog-inner {
+  margin-left: -200px;
+}
+.lightbox-fadeall .dialog .dialog-inner .container {
+  width: 400px;
+  height: 192px;
+  background: url("../img/lightbox.png") no-repeat center;
+}
+.lightbox-fadeall .dialog .dialog-inner .container .header {
+  text-align: right;
+}
+.lightbox-fadeall .dialog .dialog-inner .container .header a {
+  display: block;
+  position: relative;
+  top: 5px;
+  right: 6px;
+  font-size: 18px;
+}
+.lightbox-fadeall .dialog .dialog-inner .container .content {
+  color: black;
+  font-size: 18px;
+  line-height: 30px;
+  margin-left: 150px;
+  margin-top: 50px;
+  padding-right: 10px;
+}
+
 #container {
   min-width: 1024px;
 }
@@ -63,7 +108,9 @@ body {
   background: url("../img/nexth.png") no-repeat center;
 }
 #container .p2 {
+  display: block;
   height: 619px;
+  background-color: inherit;
 }
 #container .p2 h1 {
   font-size: 28px;
@@ -96,20 +143,20 @@ body {
 #container .p2 .member-container .icons .hr2 {
   right: 156px;
 }
-#container .p2 .member-container .icons .tasi {
+#container .p2 .member-container .icons .tsai {
   background: url("../img/tsai.png") no-repeat center;
   width: 96px;
   height: 119px;
   left: 60px;
 }
-#container .p2 .member-container .icons .tasi:hover {
+#container .p2 .member-container .icons .tsai:hover {
   background: url("../img/tsaih.png") no-repeat center;
   height: 144px;
   width: 109px;
   left: 49px;
   bottom: 0px;
 }
-#container .p2 .member-container .icons .tasi:active {
+#container .p2 .member-container .icons .tsai:active {
   background: url("../img/tsaia.png") no-repeat center;
   height: 146px;
   width: 111px;
@@ -172,7 +219,7 @@ body {
   font-size: 14px;
   margin: 0 0 3px 0;
 }
-#container .p2 .member-container .profiles .tasi {
+#container .p2 .member-container .profiles .tsai {
   margin-left: 58px;
 }
 #container .p2 .member-container .profiles .lin {
@@ -180,6 +227,9 @@ body {
 }
 #container .p2 .member-container .profiles .wu {
   margin-left: 113px;
+}
+#container .p3 {
+  display: block;
 }
 #container .p3 .back-wrapper {
   text-align: right;
@@ -198,7 +248,6 @@ body {
   width: 753px;
   margin-left: 194px;
   position: relative;
-  bottom: 40px;
 }
 #container .p3 .title .pic {
   margin-right: 15px;
@@ -210,6 +259,7 @@ body {
 }
 #container .p3 .title .detail .name {
   font-size: 47px;
+  line-height: 47px;
   color: #17889a;
 }
 #container .p3 .title .detail .area {
@@ -217,23 +267,25 @@ body {
 }
 #container .p3 .title .detail .slogan {
   font-size: 28px;
-  margin-top: 9px;
-  margin-bottom: 7px;
+  line-height: 28px;
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 #container .p3 .title .detail .aread {
   font-size: 32px;
   height: 32px;
+  line-height: 32px;
 }
-#container .p3 .title.tasi .pic {
+#container .p3 .title.tsai .pic {
   bottom: 25px;
 }
-#container .p3 .title.tasi .detail .name:after {
+#container .p3 .title.tsai .detail .name:after {
   content: "蔡正元";
 }
-#container .p3 .title.tasi .detail .area:after {
+#container .p3 .title.tsai .detail .area:after {
   content: "台北市第4選區";
 }
-#container .p3 .title.tasi .detail .aread {
+#container .p3 .title.tsai .detail .aread {
   color: #a74c4c;
 }
 #container .p3 .title.lin .pic {
@@ -261,29 +313,34 @@ body {
   color: #dd8f42;
 }
 #container .p3 .form {
+  display: none;
   float: left;
   width: 40%;
   margin-left: 50px;
   margin-top: 59px;
 }
 #container .p3 .form .form-group {
+  margin-bottom: 26px;
+}
+#container .p3 .form .form-group .inner {
   width: 367px;
   height: 41px;
   background: url("../img/input.png") no-repeat center;
   font-size: 20px;
-  margin-bottom: 26px;
 }
-#container .p3 .form .form-group label {
+#container .p3 .form .form-group .inner label {
   margin: 0 11px 0 14px;
   line-height: 42px;
+  float: left;
 }
-#container .p3 .form .form-group input {
+#container .p3 .form .form-group .inner input {
   font-size: inherit;
   color: white;
   border: 0px solid white;
   background-color: transparent;
   width: 78%;
   height: 75%;
+  margin: 4px 0px 0px 3px;
 }
 #container .p3 .form .form-group .error {
   color: #ca1117;
@@ -302,18 +359,98 @@ body {
   text-align: center;
   line-height: 40px;
 }
+#container .p3 .form .btn:active {
+  color: #354b48;
+  margin: 3px 0px 0px 3px;
+}
 #container .p3 .map {
   position: absolute;
   right: 0;
 }
-#container .p3 .map.tasi {
-  top: 17px;
+#container .p3 .map.tsai {
+  top: 70px;
 }
 #container .p3 .map.lin {
-  top: 0px;
+  top: 70px;
   right: 30px;
 }
 #container .p3 .map.wu {
   right: 20px;
-  top: -50px;
+  top: 0px;
+}
+#container .p3 .puzzle {
+  position: absolute;
+  right: 0;
+  display: none;
+  z-index: 300;
+}
+#container .p3 .t01 {
+  background: url('../img/sprites-tsai-s4c613c08ff.png') 0 0;
+  width: 120px;
+  height: 130px;
+  top: 87px;
+  left: -23px;
+}
+#container .p3 .t02 {
+  background: url('../img/sprites-tsai-s4c613c08ff.png') 0 -130px;
+  width: 104px;
+  height: 120px;
+  top: 66px;
+  left: 15px;
+}
+#container .p3 .t03 {
+  background: url('../img/sprites-tsai-s4c613c08ff.png') 0 -250px;
+  width: 137px;
+  height: 163px;
+  top: 32px;
+  left: 67px;
+}
+#container .p3 .t04 {
+  background: url('../img/sprites-tsai-s4c613c08ff.png') 0 -413px;
+  width: 147px;
+  height: 200px;
+  top: -13px;
+  left: 109px;
+}
+#container .p3 .t05 {
+  background: url('../img/sprites-tsai-s4c613c08ff.png') 0 -613px;
+  width: 224px;
+  height: 242px;
+  top: 1px;
+  left: 192px;
+}
+#container .p3 .t06 {
+  background: url('../img/sprites-tsai-s4c613c08ff.png') 0 -855px;
+  width: 90px;
+  height: 92px;
+  top: 133px;
+  left: 36px;
+}
+#container .p3 .t07 {
+  background: url('../img/sprites-tsai-s4c613c08ff.png') 0 -947px;
+  width: 104px;
+  height: 147px;
+  top: 76px;
+  left: 64px;
+}
+#container .p3 .t08 {
+  background: url('../img/sprites-tsai-s4c613c08ff.png') 0 -1094px;
+  width: 141px;
+  height: 173px;
+  top: 68px;
+  left: 177px;
+}
+#container .p3 .t09 {
+  background: url('../img/sprites-tsai-s4c613c08ff.png') 0 -1267px;
+  width: 119px;
+  height: 183px;
+  top: 99px;
+  left: 245px;
+}
+#container .p3 .t10 {
+  background: url('../img/sprites-tsai-s4c613c08ff.png') 0 -1450px;
+  width: 124px;
+  height: 98px;
+  top: 109px;
+  left: 154px;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -19,10 +20,10 @@
         <div class="p1 page">
             <a class="logo" href="#" alt="logo"></a>
             <div class="wrapper">
-                <a class="next" href="#" alt="下一頁"></a>
+                <a id="next" class="next" href="#" alt="下一頁"></a>
             </div>
         </div>
-            
+
         <div class="p2 page">
             <a class="logo" href="#" alt="logo"></a>
             <div class="wrapper">
@@ -30,41 +31,41 @@
                 <div class="member-container">
                     <div class="member-wrapper">
                         <div class="icons">
-                            <a class="icon tasi" href="javascript:void(0)" alt="蔡正元"></a>
+                            <a class="icon tsai" href="tsai" alt="蔡正元"></a>
                             <div class="hr hr1"></div>
-                            <a class="icon lin" href="javascript:void(0)" alt="林鴻池"></a>
+                            <a class="icon lin" href="lin" alt="林鴻池"></a>
                             <div class="hr hr2"></div>
-                            <a class="icon wu" href="javascript:void(0)" alt="林鴻池"></a>
+                            <a class="icon wu" href="wu" alt="林鴻池"></a>
                         </div>
                         <div class="profiles">
-                            <div class="profile tasi">
+                            <div class="profile tsai">
                                 <p class="name">蔡正元</p>
                                 <p class="area">台北市第四選區</p>
-                                <p class="aread">（內湖、南港）</p>   
+                                <p class="aread">（內湖、南港）</p>
                             </div>
 
                             <div class="profile lin">
                                 <p class="name">林鴻池</p>
                                 <p class="area">新北市第6選區</p>
-                                <p class="aread">板橋區中正里等65里</p>   
+                                <p class="aread">板橋區中正里等65里</p>
                             </div>
 
                             <div class="profile wu">
                                 <p class="name">吳育昇</p>
                                 <p class="area">新北市第1選區</p>
-                                <p class="aread">石門、三芝、淡水、八里、林口、泰山</p>   
+                                <p class="aread">石門、三芝、淡水、八里、林口、泰山</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <hr>
+
+
         <div class="p3 page">
             <a class="logo" href="#" alt="logo"></a>
-            <!-- 地圖抓550 -->
             <div class="wrapper">
-                <div class="title tasi">
+                <div class="title tsai">
                     <img class="pic" src="../img/tsai.png" width="96" height="119" alt="">
                     <div class="detail">
                         <p>
@@ -72,7 +73,7 @@
                             <span class="area"></span>
                         </p>
                         <p class="slogan">這就是想要罷免的立委</p>
-                        <p class="aread">123</p>
+                        <p class="aread"></p>
                     </div>
                 </div>
 
@@ -81,42 +82,62 @@
                         <form id="form" action="" method="">
                             <input id="area" name="area" type="hidden" value="">
                             <div class="form-group">
-                                <label for="name">姓 名</label>
-                                <input id="name" name="name" type="text" value="">
-                                <div class="error">必填欄位</div>
+                                <div class="inner">
+                                    <label for="name">姓 名</label>
+                                    <input id="name" name="name" type="text" value="">
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="phone">手 機</label>
-                                <input id="phone" name="phone" type="text" value="">
-                                <div class="error">必填欄位</div>
+                                <div class="inner">
+                                    <label for="phone">手 機</label>
+                                    <input id="phone" name="phone" type="text" value="">
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="mail">郵 件</label>
-                                <input id="mail" name="mail" type="text" value="">
-                                <div class="error">必填欄位</div>
+                                <div class="inner">
+                                    <label for="mail">郵 件</label>
+                                    <input id="mail" name="mail" type="text" value="">
+                                </div>
                             </div>
-                             <div class="form-group">
-                                <label for="ability">專 長</label>
-                                <input id="ability" name="ability" type="text" value="">
-                                <div class="error">必填欄位</div>
+                            <div class="form-group">
+                                <div class="inner">
+                                    <label for="ability">專 長</label>
+                                    <input id="ability" name="ability" type="text" value="">
+                                </div>
                             </div>
-                            <a class="btn" href="#">送 出</a>
+                            <a id="btnSubmit" class="btn" href="#">送 出</a>
                         </form>
                     </div>
 
-                    <div class="map tasi">
-                        <img src="../img/map-tsai.png" width="550" height="550" alt="">
+                    <div class="map tsai">
+                        <img src="../img/map-tsai.png" width="550" height="550" usemap="#map-tsai" alt="">
+
+                        
+                        <a class="puzzle t01" href="tasi" title="台北市/內湖區/西康里"></a>
+                        <a class="puzzle t02" href="tasi" title="台北市/內湖區/西安里"></a>  
+                        <a class="puzzle t03" href="tasi" title="台北市/內湖區/金瑞里"></a>  
+                        <a class="puzzle t04" href="tasi" title="台北市/內湖區/碧山里"></a>  
+                        <a class="puzzle t05" href="tasi" title="台北市/內湖區/內溝里"></a>  
+                        <a class="puzzle t06" href="tasi" title="台北市/內湖區/西湖里"></a>  
+                        <a class="puzzle t07" href="tasi" title="台北市/內湖區/港華里"></a>  
+                        <a class="puzzle t08" href="tasi" title="台北市/內湖區/大湖里"></a>  
+                        <a class="puzzle t09" href="tasi" title="台北市/內湖區/安泰里"></a>  
+                        <a class="puzzle t10" href="tasi" title="台北市/內湖區/金龍里"></a>  
+    
+
+
                     </div>
                 </div>
 
-                
-                
+
             </div>
             <div class="back-wrapper">
-                <a class="back" href="#" alt="回上一頁"></a>
+                <a id="back" class="back" href="#" alt="回上一頁"></a>
             </div>
         </div>
-        
+
+
+        <!--
 
         <br><br><br> <br><br><br> <br><br><br>
         <hr>
@@ -124,7 +145,6 @@
 
         <div class="p3 page">
             <a class="logo" href="#" alt="logo"></a>
-            <!-- 地圖抓550 -->
             <div class="wrapper">
                 <div class="title lin">
                     <img class="pic" src="../img/lin.png" width="96" height="110" alt="">
@@ -140,23 +160,37 @@
 
                 <div>
                     <div class="form">
-                        <form action="">
+                        <form id="form" action="" method="">
+                            <input id="area" name="area" type="hidden" value="">
                             <div class="form-group">
-                                <label for="name">姓 名</label>
-                                <input id="name" name="name" type="text" value="">
+                                <div class="inner">
+                                    <label for="name">姓 名</label>
+                                    <input id="name" name="name" type="text" value="">
+                                </div>
+                                <div class="error">必填欄位</div>
                             </div>
                             <div class="form-group">
-                                <label for="phone">手 機</label>
-                                <input id="phone" name="phone" type="text" value="">
+                                <div class="inner">
+                                    <label for="phone">手 機</label>
+                                    <input id="phone" name="phone" type="text" value="">
+                                </div>
+                                <div class="error">必填欄位</div>
                             </div>
                             <div class="form-group">
-                                <label for="mail">郵 件</label>
-                                <input id="mail" name="mail" type="text" value="">
+                                <div class="inner">
+                                    <label for="mail">郵 件</label>
+                                    <input id="mail" name="mail" type="text" value="">
+                                </div>
+                                <div class="error">必填欄位</div>
                             </div>
                              <div class="form-group">
-                                <label for="ability">專 長</label>
-                                <input id="ability" name="ability" type="text" value="">
+                                <div class="inner">
+                                    <label for="ability">專 長</label>
+                                    <input id="ability" name="ability" type="text" value="">
+                                </div>
+                                <div class="error">必填欄位</div>
                             </div>
+                            <a class="btn" href="javascript:void(0);">送 出</a>
                         </form>
                     </div>
 
@@ -165,8 +199,6 @@
                     </div>
                 </div>
 
-                
-                
             </div>
             <div class="back-wrapper">
                 <a class="back" href="#" alt="回上一頁"></a>
@@ -179,7 +211,6 @@
 
          <div class="p3 page">
                 <a class="logo" href="#" alt="logo"></a>
-                <!-- 地圖抓550 -->
                 <div class="wrapper">
                     <div class="title wu">
                         <img class="pic" src="../img/wu.png" width="96" height="108" alt="">
@@ -198,24 +229,34 @@
                             <form id="form" action="" method="">
                                 <input id="area" name="area" type="hidden" value="">
                                 <div class="form-group">
-                                    <label for="name">姓 名</label>
-                                    <input id="name" name="name" type="text" value="">
-                                </div>
-                                <div>
-                                    message
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">手 機</label>
-                                    <input id="phone" name="phone" type="text" value="">
+                                    <div class="inner">
+                                        <label for="name">姓 名</label>
+                                        <input id="name" name="name" type="text" value="">
+                                    </div>
+                                    <div class="error">必填欄位</div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="mail">郵 件</label>
-                                    <input id="mail" name="mail" type="text" value="">
+                                    <div class="inner">
+                                        <label for="phone">手 機</label>
+                                        <input id="phone" name="phone" type="text" value="">
+                                    </div>
+                                    <div class="error">必填欄位</div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="inner">
+                                        <label for="mail">郵 件</label>
+                                        <input id="mail" name="mail" type="text" value="">
+                                    </div>
+                                    <div class="error">必填欄位</div>
                                 </div>
                                  <div class="form-group">
-                                    <label for="ability">專 長</label>
-                                    <input id="ability" name="ability" type="text" value="">
+                                    <div class="inner">
+                                        <label for="ability">專 長</label>
+                                        <input id="ability" name="ability" type="text" value="">
+                                    </div>
+                                    <div class="error">必填欄位</div>
                                 </div>
+                                <a class="btn" href="javascript:void(0);">送 出</a>
                             </form>
                         </div>
 
@@ -229,17 +270,105 @@
                 </div>
             </div>
         </div>
-
-
     </div>
-    
+    -->
 
 
-    <script src="../js/lib/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="../js/lib/jquery_plugin/waypoints.min.js" type="text/javascript"></script>
-    <script src="../js/lib/jquery_plugin/jquery.disablescroll.min.js" type="text/javascript"></script>
-    <script src="../js/lib/jquery_plugin/jquery.validate.1.11.1.min.js" type="text/javascript"></script>
-    <script src="../js/main.js" type="text/javascript"></script>
+        <div id="lightboxMsg" class="lightbox-fadeall">
+            <div class="dialog">
+                <div class="dialog-inner">
+                    <div class="container">
+                        <div class="header">
+                            <a href="#">X</a>
+                        </div>
+                        <div class="content">
+                            測試字數長短測試字數長短測試字數長短
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <map name="map-tsai" id="map-tsai">
+            <area shape="poly" coords="330,227,340,220,344,198,362,177,362,152,353,136,356,111,337,103,299,68,287,66,232,45,232,72,209,104,256,96,286,140,295,133,313,141,325,223,329,227" href="#" alt="台北市/內湖區/內溝里" />
+            <area shape="poly" coords="287,143,297,137,309,142,322,225,315,224,313,227,313,230,308,228,307,222,303,210,298,203,299,169,288,144" href="#" alt="台北市/內湖區/安泰里" />
+            <area shape="poly" coords="332,244,328,230,324,228,318,227,315,232,316,241,322,247,319,256,330,245" href="#" alt="台北市/內湖區/樂康里" />
+            <area shape="poly" coords="307,231,307,252,315,258,319,248,313,244,312,233,306,230" href="#" alt="台北市/內湖區/東湖里" />
+            <area shape="poly" coords="287,277,290,273,309,274,310,269,314,266,314,260,303,254,289,256,285,269,287,274" href="#" alt="台北市/內湖區/五分里" />
+            <area shape="poly" coords="288,245,289,253,303,251,304,239" href="#" alt="台北市/內湖區/安湖里" />
+            <area shape="poly" coords="296,238,302,236,304,230,303,216,296,205,286,208,279,226,284,224,287,231,293,229,296,237" href="#" alt="台北市/內湖區/康寧里" />
+            <area shape="poly" coords="277,235,278,231,282,229,286,235,291,233,294,239,287,242,276,235" href="#" alt="台北市/內湖區/明湖里" />
+            <area shape="poly" coords="221,275,282,269,287,254,285,245,262,232,245,249,242,265" href="#" alt="台北市/內湖區/葫洲里" />
+            <area shape="poly" coords="236,197,235,214,244,245,261,227,274,234,274,229,284,206,295,202,295,197,277,197,265,202" href="#" alt="台北市/內湖區/金湖里" />
+
+            <area shape="poly" coords="266,198,276,193,295,193,295,169,282,141,255,99,209,108,207,139,217,144,218,153,234,155,238,162,245,165,244,170,260,179,267,187" href="#" alt="台北市/內湖區/大湖里" />
+            <area shape="poly" coords="219,157,222,165,231,182,236,194,263,198,263,189,259,182,242,174,241,166,235,164,232,158" href="#" alt="台北市/內湖區/秀湖里" />
+
+
+            <area shape="poly" coords="206,108,203,108,212,95,222,81,228,71,229,44,219,37,210,16,199,11,190,17,179,17,167,43,148,55,138,55,131,65,140,91,168,107,162,128,171,131,173,147,186,156,188,158,189,141,204,138" href="#" alt="台北市/內湖區/碧山里" />
+            <area shape="poly" coords="191,144,191,160,194,164,210,170,219,166,213,146,205,141" href="#" alt="台北市/內湖區/金龍里" />
+
+            <area shape="poly" coords="229,184,220,169,210,172,196,183,205,193,218,186,221,190" href="#" alt="台北市/內湖區/清白里" />
+            <area shape="poly" coords="232,211,233,198,230,189,221,194,217,190,201,199,201,212" href="#" alt="台北市/內湖區/紫雲里" />
+            <area shape="poly" coords="186,265,189,260,215,275,239,263,242,249,233,215,200,215,178,221,156,220,141,232,155,248,173,248,174,255" href="#" alt="台北市/內湖區/湖興里" />
+            <area shape="poly" coords="188,215,198,212,198,197,203,194,194,186,183,201" href="#" alt="台北市/內湖區/紫星里" />
+            <area shape="poly" coords="156,216,176,218,185,215,180,201,165,191,153,195,156,202,155,214" href="#" alt="台北市/內湖區/紫陽里" />
+            <area shape="poly" coords="187,161,185,170,190,184,206,171,191,166" href="#" alt="台北市/內湖區/內湖里" />
+            <area shape="poly" coords="140,155,140,172,151,192,164,186,181,197,188,186,182,170,169,170,156,154" href="#" alt="台北市/內湖區/湖濱里" />
+            <area shape="poly" coords="182,167,185,157,170,149,168,132,158,129,164,108,138,92,122,53,108,54,93,61,78,93,88,101,104,109,118,122,130,134,145,140,140,152,157,151,170,167" href="#" alt="台北市/內湖區/金瑞里" />
+            <area shape="poly" coords="130,137,129,183,124,196,133,205,152,199,138,173,136,154,141,141" href="#" alt="台北市/內湖區/港富里" />
+            <area shape="poly" coords="126,181,127,135,104,113,88,105,89,158,107,161,104,174" href="#" alt="台北市/內湖區/港華里" />
+            <area shape="poly" coords="85,158,85,104,75,95,57,98,38,98,34,108,52,124,50,156" href="#" alt="台北市/內湖區/西安里" />
+
+
+            <area shape="poly" coords="31,111,24,120,18,128,9,130,9,136,17,148,31,151,31,161,36,169,44,165,54,180,63,195,65,173,65,160,48,159,48,136,47,123" href="#" alt="台北市/內湖區/西康里" />
+            <area shape="poly" coords="69,160,68,181,66,199,85,203,94,187,86,187,85,176,90,172,92,162" href="#" alt="台北市/內湖區/西湖里" />
+            <area shape="poly" coords="95,162,94,174,88,179,89,184,98,184,109,189,102,177,104,164" href="#" alt="台北市/內湖區/麗山里" />
+            <area shape="poly" coords="106,178,112,191,121,195,126,185" href="#" alt="台北市/內湖區/港都里" />
+            <area shape="poly" coords="97,187,89,205,102,219,101,233,128,224,122,217,133,210,122,199" href="#" alt="台北市/內湖區/港墘里" />
+            <area shape="poly" coords="126,218,139,230,142,227,138,212" href="#" alt="台北市/內湖區/瑞光里" />
+            <area shape="poly" coords="140,209,135,208,152,202,153,218,145,224" href="#" alt="台北市/內湖區/瑞陽里" />
+            <area shape="poly" coords="97,325,97,301,86,280,99,254,100,236,131,226,154,251,171,252,171,257,186,268,185,272,161,263,161,278,151,292" href="#" alt="台北市/內湖區/湖元里" />
+            <area shape="poly" coords="97,329,96,338,104,340,139,332,127,311" href="#" alt="台北市/內湖區/行善里" />
+            <area shape="poly" coords="130,309,143,331,171,322,152,295" href="#" alt="台北市/內湖區/週美里" />
+            <area shape="poly" coords="173,321,154,293,164,279,164,267,186,277,189,265,210,278,213,294,201,295" href="#" alt="台北市/內湖區/石潭里" />
+            <area shape="poly" coords="214,279,216,295,224,302,247,299,274,295,284,280,282,272" href="#" alt="台北市/內湖區/蘆洲里" />
+            <area shape="poly" coords="276,296,292,276,310,277,327,291,344,321,333,314,327,320,329,325,315,320,300,320,280,311,281,303" href="#" alt="台北市/南港區/三重里" />
+            <area shape="poly" coords="255,300,261,314,263,321,263,331,280,334,291,326,321,325,314,321,299,322,278,312,278,303,274,297" href="#" alt="台北市/南港區/南港里" />
+            <area shape="poly" coords="196,303,202,297,214,298,223,305,238,303,252,301,258,315,241,323,218,322,207,322" href="#" alt="台北市/南港區/東新里" />
+            <area shape="poly" coords="194,306,205,323,206,339,196,342,196,339,180,344,180,334,175,324" href="#" alt="台北市/南港區/西新里" />
+            <area shape="poly" coords="143,351,140,346,143,335,159,330,173,326,177,334,177,344" href="#" alt="台北市/南港區/玉成里" />
+            <area shape="poly" coords="208,325,210,342,238,336,261,331,259,318,241,328" href="#" alt="台北市/南港區/東明里" />
+            <area shape="poly" coords="147,377,141,373,144,354,168,349,192,344,190,350,171,356,157,359,156,363" href="#" alt="台北市/南港區/合成里" />
+            <area shape="poly" coords="158,385,150,379,159,364,168,369,167,375" href="#" alt="台北市/南港區/萬福里" />
+            <area shape="poly" coords="162,362,171,366,172,369,186,369,189,366,186,361,187,355" href="#" alt="台北市/南港區/聯成里" />
+            <area shape="poly" coords="196,344,189,361,194,370,204,364,204,357,219,362,219,371,238,382,254,370,271,370,286,363,274,349,261,335,238,340,216,344,207,345,207,342" href="#" alt="台北市/南港區/新光里" />
+            <area shape="poly" coords="265,334,287,360,290,354,304,353,303,330,291,330,280,337" href="#" alt="台北市/南港區/中南里" />
+            <area shape="poly" coords="306,330,326,330,316,338,308,352" href="#" alt="台北市/南港區/新富里" />
+            <area shape="poly" coords="160,387,169,395,172,391,167,380" href="#" alt="台北市/南港區/鴻福里" />
+            <area shape="poly" coords="171,371,169,377,175,391,186,405,187,394,194,391,206,402,195,419,190,427,186,430,195,441,192,455,178,463,163,483,160,495,156,510,141,523,131,532,131,536,138,542,166,530,193,518,215,508,211,493,220,485,211,463,221,437,228,417,230,412,232,403,235,385,221,376,216,373,216,364,207,360,207,366,194,373,190,369,187,372" href="#" alt="台北市/南港區/成福里" />
+            <area shape="poly" coords="174,394,171,399,184,417,185,426,189,423,189,414" href="#" alt="台北市/南港區/百福里" />
+            <area shape="poly" coords="189,396,194,394,202,403,192,418,192,414,189,410" href="#" alt="台北市/南港區/仁福里" />
+            <area shape="poly" coords="147,541,172,539,188,538,202,531,211,527,218,534,231,532,241,531,250,515,253,509,270,508,274,500,291,501,306,502,317,495,325,486,343,486,344,473,337,462,329,450,339,436,335,424,323,420,331,406,317,394,314,413,298,406,297,394,287,387,287,365,273,372,256,371,245,380,239,385,236,398,234,408,233,413,226,432,219,448,214,461,218,474,223,486,214,493,218,509,208,514" href="#" alt="台北市/南港區/九如里" />
+            <area shape="poly" coords="290,386,290,361,292,356,308,356,316,371,321,380,314,390,312,409,300,405,300,393" href="#" alt="台北市/南港區/中研里" />
+            <area shape="poly" coords="323,382,317,390,327,400,333,406,327,418,337,422,341,436,332,450,340,462,347,473,347,488,326,489,317,498,309,504,296,504,299,507,310,512,322,512,330,514,342,517,347,518,359,509,369,502,374,491,378,482,384,474,398,486,410,487,423,488,434,482,443,489,454,496,463,488,468,484,480,482,485,481,501,486,513,487,530,489,540,479,537,469,543,455,529,455,515,454,503,462,498,464,481,465,469,465,455,462,440,455,427,449,420,443,407,433,398,430,389,425,380,427,375,429,365,412,357,414,353,414,342,407,336,402" href="#" alt="台北市/南港區/舊莊里" />
+        </map>
+
+
+
+
+        <script src="../js/lib/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="../js/lib/jquery_plugin/waypoints.min.js" type="text/javascript"></script>
+        <script src="../js/lib/jquery_plugin/jquery.disablescroll.min.js" type="text/javascript"></script>
+        <script src="../js/lib/jquery_plugin/jquery.validate.1.11.1.min.js" type="text/javascript"></script>
+        <script src="../js/lib/jquery_plugin/jquery.maphilight.js" type="text/javascript"></script>
+        <script src="../js/main.js" type="text/javascript"></script>
 
 </body>
+
 </html>
