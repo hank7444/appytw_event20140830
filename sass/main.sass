@@ -21,7 +21,7 @@ select
 body
 	color: #fff
 	background-color: #353443
-	font: 12px "蘋果儷中黑", "微軟正黑體", Verdana, Arial, sans-serif, "新細明體"
+	font: 12px "蘋果儷中黑", "微軟正黑體", sans-serif, "新細明體"
 
 
 .ui-autocomplete 
@@ -66,6 +66,10 @@ body
 					margin-left: 150px
 					margin-top: 50px
 					padding-right: 10px
+				.btn
+					position: relative
+					left: 150px
+					display: none
 
 
 
@@ -82,15 +86,89 @@ body
 			width: 104px
 			height: 94px
 			background: url("../img/logo.png") no-repeat center
-
 		.wrapper
 			width: 1024px
 			height: 599px
 			margin: 0 auto
 			position: relative
+		.steps
+			width: 85%
+			position: relative
+			bottom: 65px
+			text-align: center
+			margin: 0 auto
+			margin-left: 130px
+			min-width: 1120px
+			.steps-wrapper
+				margin: 0 auto
+				width: 80%
+				li
+					display: inline-block
+				li.circle
+					position: relative
+					//display: inline-block
+					width: 130px
+					height: 130px
+					border-radius: 50%
+					background-color: #bf9e37
+					h1, h3, h4
+						position: absolute
+						width: 100%
+					h1
+						font-size: 70px
+						top: 20px
+					h3
+						font-size: 23px
+						top: 84px
+					h4
+						width: 300px
+						font-size: 25px
+						bottom: -40px
+						left: -85px
+						color: #bf9e37
+				li.line
+					width: 20%
+					min-width: 200px
+					border-top: 10px solid #bf9e37
+					height: 70px
+					margin: 55px -4px
+					vertical-align: top
+				li.circle.active
+					background-color: #ffd349
+					h4
+						color: #ffd349
+				li.line.active
+					border-color: #ffd349
+		.back-wrapper 
+			text-align: right
+			.back
+				display: inline-block
+				width: 39px
+				height: 38px
+				margin: 0 11px 11px 0
+				background: url("../img/back.png") no-repeat center
+				&:hover
+					background: url("../img/backh.png") no-repeat center
+			.fbshare
+				display: inline-block
+				width: 39px
+				height: 39px
+				margin: 0 11px 11px 0
+				background: url("../img/iconfb.png") no-repeat center
 	.p1
 		background: url("../img/p1bg.jpg") no-repeat center
 		background-size: cover
+		height: 640px
+		.wrapper
+			background: url("../img/main_pic_modified.png") no-repeat center
+		#p1_logo
+			display: block
+			position: relative
+			top: 30px
+			left: 40px
+			width: 300px
+			height: 104px
+			background-color: transparent
 		.wrapper
 			position: static
 		.next
@@ -98,20 +176,24 @@ body
 			position: absolute
 			bottom: 0
 			left: 50%
-			margin-left: -22.5px
-			width: 45px
-			height: 30px
-			background: url("../img/next.png") no-repeat center
-			&:hover
-				background: url("../img/nexth.png") no-repeat center
+			margin-left: -50px
+			text-align: center
+			div
+				width: 100px
+				position: relative
+				bottom: 35px
+				font-size: 16px
+			a
+				width: 45px
+				height: 30px
+				margin-left: -22.5px
+				background: url("../img/next.png") no-repeat center
+				&:hover
+					background: url("../img/nexth.png") no-repeat center
 	.p2
 		display: none
 		height: 619px
 		background-color: inherit
-		h1
-			font-size: 28px
-			text-align: center
-			margin-bottom: 102px
 		.member-container
 			width: 753px
 			margin: 0 auto
@@ -204,18 +286,11 @@ body
 					margin-left: 158px
 				.wu
 					margin-left: 113px
+		.back-wrapper 
+			position: relative
+			bottom: 390px
 	.p3
 		display: none
-		.back-wrapper 
-			text-align: right
-			.back
-				display: inline-block
-				width: 39px
-				height: 38px
-				margin: 0 11px 11px 0
-				background: url("../img/back.png") no-repeat center
-				&:hover
-					background: url("../img/backh.png") no-repeat center
 		.title
 			width: 753px
 			margin-left: 194px
@@ -277,7 +352,6 @@ body
 						content: "新北市第1選區"
 				.aread
 					color: #dd8f42
-
 		.form
 			display: none
 			float: left
@@ -308,19 +382,6 @@ body
 					font-size: 16px 
 					margin-top: 3px
 					margin-left: 75px
-			.btn
-				display: inline-block
-				width: 72px
-				height: 39px
-				background-color: #00ad98
-				border-radius: 3px
-				font-size: 20px
-				color: #fff
-				text-align: center
-				line-height: 40px
-				&:active
-					color: #354b48
-					margin: 3px 0px 0px 3px
 
 
 		.map
@@ -335,6 +396,19 @@ body
 		.map.wu
 			right: 20px
 			top: 0px
+	.btn
+		display: inline-block
+		height: 39px
+		background-color: #00ad98
+		border-radius: 3px
+		font-size: 20px
+		color: #fff
+		text-align: center
+		line-height: 40px
+		padding: 0 13px
+		&:active
+			color: #354b48
+			margin: 3px 0px 0px 3px
 
 
 

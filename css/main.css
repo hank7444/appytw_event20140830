@@ -17,7 +17,7 @@ select:-moz-focusring {
 body {
   color: white;
   background-color: #353443;
-  font: 12px "蘋果儷中黑", "微軟正黑體", Verdana, Arial, sans-serif, "新細明體";
+  font: 12px "蘋果儷中黑", "微軟正黑體", sans-serif, "新細明體";
 }
 
 .ui-autocomplete {
@@ -70,6 +70,11 @@ body {
   margin-top: 50px;
   padding-right: 10px;
 }
+.lightbox-fadeall .dialog .dialog-inner .container .btn {
+  position: relative;
+  left: 150px;
+  display: none;
+}
 
 #container {
   min-width: 1024px;
@@ -93,9 +98,101 @@ body {
   margin: 0 auto;
   position: relative;
 }
+#container .page .steps {
+  width: 85%;
+  position: relative;
+  bottom: 65px;
+  text-align: center;
+  margin: 0 auto;
+  margin-left: 130px;
+  min-width: 1120px;
+}
+#container .page .steps .steps-wrapper {
+  margin: 0 auto;
+  width: 80%;
+}
+#container .page .steps .steps-wrapper li {
+  display: inline-block;
+}
+#container .page .steps .steps-wrapper li.circle {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #bf9e37;
+}
+#container .page .steps .steps-wrapper li.circle h1, #container .page .steps .steps-wrapper li.circle h3, #container .page .steps .steps-wrapper li.circle h4 {
+  position: absolute;
+  width: 100%;
+}
+#container .page .steps .steps-wrapper li.circle h1 {
+  font-size: 70px;
+  top: 20px;
+}
+#container .page .steps .steps-wrapper li.circle h3 {
+  font-size: 23px;
+  top: 84px;
+}
+#container .page .steps .steps-wrapper li.circle h4 {
+  width: 300px;
+  font-size: 25px;
+  bottom: -40px;
+  left: -85px;
+  color: #bf9e37;
+}
+#container .page .steps .steps-wrapper li.line {
+  width: 20%;
+  min-width: 200px;
+  border-top: 10px solid #bf9e37;
+  height: 70px;
+  margin: 55px -4px;
+  vertical-align: top;
+}
+#container .page .steps .steps-wrapper li.circle.active {
+  background-color: #ffd349;
+}
+#container .page .steps .steps-wrapper li.circle.active h4 {
+  color: #ffd349;
+}
+#container .page .steps .steps-wrapper li.line.active {
+  border-color: #ffd349;
+}
+#container .page .back-wrapper {
+  text-align: right;
+}
+#container .page .back-wrapper .back {
+  display: inline-block;
+  width: 39px;
+  height: 38px;
+  margin: 0 11px 11px 0;
+  background: url("../img/back.png") no-repeat center;
+}
+#container .page .back-wrapper .back:hover {
+  background: url("../img/backh.png") no-repeat center;
+}
+#container .page .back-wrapper .fbshare {
+  display: inline-block;
+  width: 39px;
+  height: 39px;
+  margin: 0 11px 11px 0;
+  background: url("../img/iconfb.png") no-repeat center;
+}
 #container .p1 {
   background: url("../img/p1bg.jpg") no-repeat center;
   background-size: cover;
+  height: 640px;
+}
+#container .p1 .wrapper {
+  background: url("../img/main_pic_modified.png") no-repeat center;
+}
+#container .p1 #p1_logo {
+  display: block;
+  position: relative;
+  top: 30px;
+  left: 40px;
+  width: 300px;
+  height: 104px;
+  background-color: transparent;
 }
 #container .p1 .wrapper {
   position: static;
@@ -105,23 +202,28 @@ body {
   position: absolute;
   bottom: 0;
   left: 50%;
-  margin-left: -22.5px;
+  margin-left: -50px;
+  text-align: center;
+}
+#container .p1 .next div {
+  width: 100px;
+  position: relative;
+  bottom: 35px;
+  font-size: 16px;
+}
+#container .p1 .next a {
   width: 45px;
   height: 30px;
+  margin-left: -22.5px;
   background: url("../img/next.png") no-repeat center;
 }
-#container .p1 .next:hover {
+#container .p1 .next a:hover {
   background: url("../img/nexth.png") no-repeat center;
 }
 #container .p2 {
   display: none;
   height: 619px;
   background-color: inherit;
-}
-#container .p2 h1 {
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 102px;
 }
 #container .p2 .member-container {
   width: 753px;
@@ -234,21 +336,12 @@ body {
 #container .p2 .member-container .profiles .wu {
   margin-left: 113px;
 }
+#container .p2 .back-wrapper {
+  position: relative;
+  bottom: 390px;
+}
 #container .p3 {
   display: none;
-}
-#container .p3 .back-wrapper {
-  text-align: right;
-}
-#container .p3 .back-wrapper .back {
-  display: inline-block;
-  width: 39px;
-  height: 38px;
-  margin: 0 11px 11px 0;
-  background: url("../img/back.png") no-repeat center;
-}
-#container .p3 .back-wrapper .back:hover {
-  background: url("../img/backh.png") no-repeat center;
 }
 #container .p3 .title {
   width: 753px;
@@ -354,21 +447,6 @@ body {
   margin-top: 3px;
   margin-left: 75px;
 }
-#container .p3 .form .btn {
-  display: inline-block;
-  width: 72px;
-  height: 39px;
-  background-color: #00ad98;
-  border-radius: 3px;
-  font-size: 20px;
-  color: white;
-  text-align: center;
-  line-height: 40px;
-}
-#container .p3 .form .btn:active {
-  color: #354b48;
-  margin: 3px 0px 0px 3px;
-}
 #container .p3 .map {
   position: absolute;
   right: 0;
@@ -384,4 +462,19 @@ body {
 #container .p3 .map.wu {
   right: 20px;
   top: 0px;
+}
+#container .btn {
+  display: inline-block;
+  height: 39px;
+  background-color: #00ad98;
+  border-radius: 3px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  padding: 0 13px;
+}
+#container .btn:active {
+  color: #354b48;
+  margin: 3px 0px 0px 3px;
 }
