@@ -309,7 +309,8 @@
             }, image.src = _urlBase + imgs[i];
         })();
 
-        $('.fbshare').on('click', function() {
+        $('.fbshare').on('click', function(e) {
+            e.preventDefault();
             fbshare();
         });
         // 2014.10.05新增: 結束
