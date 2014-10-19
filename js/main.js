@@ -316,6 +316,8 @@
                 '../img/wu.png',
                 '../img/wuh.png',
                 '../img/wua.png',
+                '../img/alln.png',
+                '../img/allh.png',
                 '../img/back.png',
                 '../img/backh.png'
             ];
