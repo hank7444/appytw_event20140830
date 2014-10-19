@@ -33,10 +33,15 @@
             iconHeight: 108,
             mapAlt: '新北市第1選區',
             areaInput: '新北市/'
+        },
+        'all': {
+            iconHeight: 97,
+            mapAlt: '不分區',
+            areaInput: '不分區'
         }
 
     };
-    var memberNames = 'tasi lin wu';
+    var memberNames = 'tasi lin wu all';
     var mapHighlightOption = {
         fill: true,
         fillColor: 'ff0000',
@@ -115,9 +120,23 @@
 
             $memberInput.val(href);
             $areaInput.val(memberData.areaInput);
-            $areaInput.autocomplete({
-                source: areaData[href]
-            });
+
+            // 2014.10.19新增: 開始
+            if (href === 'all') {
+                $areaInput.attr('readonly', true);
+                $title.find('.slogan').html('請填寫您的聯絡方式');
+                $title.find('.area').html('三區皆可幫忙<br><span>蔡正元、林鴻池、吳育昇</span>');
+                $formDiv.fadeIn();
+            }
+            else {
+                $areaInput.attr('readonly', false);
+                $title.find('.slogan').html('這就是想要罷免的立委');
+                $title.find('.area').html('');
+                $areaInput.autocomplete({
+                    source: areaData[href]
+                });
+            }
+            // 2014.10.19新增: 結束
 
             // 2014.10.05新增: 開始
             stepsLastLine.remove('active');

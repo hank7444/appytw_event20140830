@@ -209,7 +209,7 @@ body {
   width: 100px;
   position: relative;
   bottom: 35px;
-  font-size: 16px;
+  font-size: 15px;
 }
 #container .p1 .next a {
   width: 45px;
@@ -226,7 +226,7 @@ body {
   background-color: inherit;
 }
 #container .p2 .member-container {
-  width: 753px;
+  width: 1024px;
   margin: 0 auto;
 }
 #container .p2 .member-container .icons {
@@ -249,7 +249,10 @@ body {
   left: 156px;
 }
 #container .p2 .member-container .icons .hr2 {
-  right: 156px;
+  left: 423px;
+}
+#container .p2 .member-container .icons .hr3 {
+  left: 693px;
 }
 #container .p2 .member-container .icons .tsai {
   background: url("../img/tsai.png") no-repeat center;
@@ -297,21 +300,34 @@ body {
   width: 96px;
   height: 108px;
   margin-top: 11px;
-  right: 60px;
+  right: 331px;
 }
 #container .p2 .member-container .icons .wu:hover {
   background: url("../img/wuh.png") no-repeat center;
   height: 136px;
   width: 98px;
-  right: 60px;
+  right: 331px;
   bottom: 0px;
 }
 #container .p2 .member-container .icons .wu:active {
   background: url("../img/wua.png") no-repeat center;
   height: 138px;
   width: 98px;
-  right: 60px;
+  right: 331px;
   bottom: 0px;
+}
+#container .p2 .member-container .icons .all {
+  background: url("../img/alln.png") no-repeat center;
+  height: 124px;
+  width: 110px;
+  right: 47px;
+}
+#container .p2 .member-container .icons .all:hover {
+  background: url("../img/allh.png") no-repeat center;
+  height: 174px;
+  width: 160px;
+  right: 20px;
+  bottom: -10px;
 }
 #container .p2 .member-container .profiles .profile {
   display: inline-block;
@@ -335,6 +351,9 @@ body {
 }
 #container .p2 .member-container .profiles .wu {
   margin-left: 113px;
+}
+#container .p2 .member-container .profiles .all {
+  margin-left: 105px;
 }
 #container .p2 .back-wrapper {
   position: relative;
@@ -410,6 +429,18 @@ body {
 }
 #container .p3 .title.wu .detail .aread {
   color: #dd8f42;
+}
+#container .p3 .title.all .pic {
+  bottom: 5px;
+}
+#container .p3 .title.all .detail .name:after {
+  content: "不分區";
+}
+#container .p3 .title.all .detail .area {
+  display: inline-block;
+}
+#container .p3 .title.all .detail .area span {
+  font-size: 12px;
 }
 #container .p3 .form {
   display: none;
