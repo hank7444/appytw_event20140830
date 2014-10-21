@@ -20,22 +20,26 @@
 
     var memberDataHash = {
         'tsai': {
+            iconWidth: 96,
             iconHeight: 119,
             mapAlt: '台北市第4選區',
             areaInput: '台北市/'
         },
         'lin': {
+            iconWidth: 96,
             iconHeight: 110,
             mapAlt: '新北市第6選區',
             areaInput: '新北市/板橋區/'
         },
         'wu': {
+            iconWidth: 96,
             iconHeight: 108,
             mapAlt: '新北市第1選區',
             areaInput: '新北市/'
         },
         'all': {
-            iconHeight: 97,
+            iconWidth: 110,
+            iconHeight: 124,
             mapAlt: '不分區',
             areaInput: '不分區'
         }
@@ -112,6 +116,7 @@
 
             $title.removeClass(memberNames).addClass(href);
             $title.find('img').attr('src', '../img/' + href + '.png')
+                .attr('width', memberData.iconWidth)
                 .attr('height', memberData.iconHeight);
             $title.find('.aread').html('');
 
@@ -316,8 +321,9 @@
                 '../img/wu.png',
                 '../img/wuh.png',
                 '../img/wua.png',
-                '../img/alln.png',
+                '../img/all.png',
                 '../img/allh.png',
+                '../img/alla.png',
                 '../img/back.png',
                 '../img/backh.png'
             ];

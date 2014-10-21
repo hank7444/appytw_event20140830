@@ -126,8 +126,8 @@ body {
   width: 100%;
 }
 #container .page .steps .steps-wrapper li.circle h1 {
-  font-size: 70px;
-  top: 20px;
+  font-size: 65px;
+  top: 18px;
 }
 #container .page .steps .steps-wrapper li.circle h3 {
   font-size: 23px;
@@ -206,10 +206,14 @@ body {
   text-align: center;
 }
 #container .p1 .next div {
-  width: 100px;
+  width: 122px;
+  height: 56px;
   position: relative;
   bottom: 35px;
   font-size: 15px;
+  text-indent: 5px;
+  line-height: 75px;
+  background: url("../img/nextword.png") no-repeat center;
 }
 #container .p1 .next a {
   width: 45px;
@@ -317,7 +321,7 @@ body {
   bottom: 0px;
 }
 #container .p2 .member-container .icons .all {
-  background: url("../img/alln.png") no-repeat center;
+  background: url("../img/all.png") no-repeat center;
   height: 124px;
   width: 110px;
   right: 47px;
@@ -328,6 +332,13 @@ body {
   width: 160px;
   right: 20px;
   bottom: -10px;
+}
+#container .p2 .member-container .icons .all:active {
+  background: url("../img/alla.png") no-repeat center;
+  height: 174px;
+  width: 160px;
+  right: 25px;
+  bottom: -7px;
 }
 #container .p2 .member-container .profiles .profile {
   display: inline-block;
@@ -431,7 +442,7 @@ body {
   color: #dd8f42;
 }
 #container .p3 .title.all .pic {
-  bottom: 5px;
+  bottom: 25px;
 }
 #container .p3 .title.all .detail .name:after {
   content: "不分區";
